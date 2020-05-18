@@ -1,0 +1,11 @@
+# dockerとdocker-composeのインストール
+- name: install docker
+  yum: name=docker state=present
+- name: systemctl enable docker
+  systemd:
+    name: docker
+    enabled: yes
+    state: started
+
+- name: install docker-compose
+  script: install.sh

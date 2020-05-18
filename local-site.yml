@@ -1,0 +1,6 @@
+---
+- name: provisioning for dev-server
+  hosts: localhost
+  become: true
+  roles:
+    - docker
